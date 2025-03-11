@@ -1,0 +1,9 @@
+{% extends "wiki/base.html" %}
+{% block title %}{{ article.title }} - Wiki{% endblock %}
+
+{% block content %}
+<h1>{{ article.title }}</h1>
+<p><strong>Category:</strong> {{ article.category.name }}</p>
+<p><strong>Content:</strong> {{ article.entry }}</p>
+<a href="{% url 'article_list' %}">Back</a>
+{% endblock %}
